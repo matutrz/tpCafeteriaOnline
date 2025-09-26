@@ -1,0 +1,164 @@
+.ElementoContainer{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.DescripcionContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ImagenCarrito{
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.Descripcion{
+  display: flex;
+  flex-direction: column;
+}
+
+.NombreProducto{
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.PrecioProducto{
+  color: #656565;
+  font-size: 1em;
+  margin-top: 2px;
+}
+
+.CantidadContainer{
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  padding-left: 25px;
+}
+
+.BotonCarrito{
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.BotonCarrito:hover {
+  transform: scale(1.2);
+}
+
+.CantidadProducto{
+  width: 40px;
+  height: 32px;
+  text-align: center;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.TachoEliminar {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.BotonEliminar {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.BotonEliminar:hover {
+  transform: scale(1.2);
+}
+
+.TextoSubtotal {
+  text-align: end;
+  font-size: 1.2em;
+  padding-right: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .ElementoContainer {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    font-size: 0.95em;
+  }
+  .ImagenCarrito {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .CantidadProducto {
+    width: 32px;
+    height: 32px; 
+    font-size: 1em;
+  }
+  .BotonCarrito {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2em;
+  }
+  .TextoSubtotal {
+    font-size: 1em;
+    padding-right: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ElementoContainer {
+    grid-template-columns: 1fr 0.8fr 0.8fr;
+    font-size: 0.9em;
+    padding: 8px 0;
+  }
+  .DescripcionContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ImagenCarrito {
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+  }
+  .NombreProducto {
+    font-size: 1em;
+  }
+  .PrecioProducto {
+    font-size: 0.95em;
+  }
+  .CantidadContainer {
+    padding-left: 0;
+    gap: 2px;
+  }
+  .BotonCarrito {
+    width: 26px;
+    height: 26px;
+    font-size: 1em;
+  }
+  .CantidadProducto {
+    width: 34px; /* Más ancho para que el 100 entre mejor */
+    height: 26px;
+    font-size: 1em;
+  }
+  .TachoEliminar {
+    width: 16px;
+    height: 16px;
+  }
+  .TextoSubtotal {
+    font-size: 0.95em;
+    padding-right: 0;
+  }
+}
+
