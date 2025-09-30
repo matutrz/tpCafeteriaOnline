@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Carrito from "./pages/Carrito";
 import reactLogo from "./assets/react.svg";
@@ -7,7 +7,8 @@ import reactLogo from "./assets/react.svg";
 function App() {
   const [carrito, setCarrito] = useState([]);
 
-  function agregarProducto(producto) { //sirve para agregar un producto o agregar varias veces el mismo producto
+  function agregarProducto(producto) {
+    //sirve para agregar un producto o agregar varias veces el mismo producto
     const storageCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let nuevoCarrito;
     const existe = storageCarrito.find((item) => item.id === producto.id);

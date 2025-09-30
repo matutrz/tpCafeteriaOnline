@@ -4,6 +4,16 @@ function ElementoCarrito({ elemento }) {
   function cambiarCantInput(e) {
     const value = e.target.value;
     const num = Number(value);
+    if (num > 100){
+      alert("La cantidad máxima es 100 unidades.");
+      return;
+    }
+
+    if (num < 1){
+      alert("La cantidad minima es 1 unidad.");
+      return;
+    }
+
     if (num >= 1 && num <= 100) {
       elemento.setCantidad(elemento.id, num);
     }

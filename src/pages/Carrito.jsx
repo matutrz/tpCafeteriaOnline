@@ -3,7 +3,8 @@ import ElementoCarrito from "../components/ElementoCarrito";
 import style from "./Carrito.module.css";
 
 function Carrito({ productos }) {
-  const { carrito, setCarrito , actualizarCarrito} = productos;
+  const { carrito, setCarrito, actualizarCarrito } = productos;
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     // Cargo el carrito desde localStorage al iniciar, sirve para cuando vuelvo a la pagina o la refresco
@@ -14,8 +15,6 @@ function Carrito({ productos }) {
   useEffect(() => {
     actualizarTotal();
   }, [carrito]);
-
-  const [total, setTotal] = useState(0);
 
   function eliminarProducto(id) {
     const nuevoCarrito = carrito.filter((item) => item.id !== id);
@@ -32,6 +31,11 @@ function Carrito({ productos }) {
   }
 
   function aumentarCantidad(id) {
+    const producto = carrito.find((item) => item.id === id);
+    if (producto && producto.cantidad === 100) {
+      alert("La cantidad máxima es 100 unidades.");
+      return;
+    }
     const nuevoCarrito = carrito.map((item) =>
       item.id === id && item.cantidad < 100
         ? { ...item, cantidad: item.cantidad + 1 }
@@ -42,18 +46,34 @@ function Carrito({ productos }) {
 
   function setCantidad(id, cantidad) {
     const nuevoCarrito = carrito.map((item) =>
-        item.id === id ? { ...item, cantidad: cantidad } : item
-      );
+      item.id === id ? { ...item, cantidad: cantidad } : item
+    );
     actualizarCarrito(nuevoCarrito);
   }
 
   function disminuirCantidad(id) {
+    const producto = carrito.find((item) => item.id === id);
+    if (producto && producto.cantidad === 1) {
+      alert("La cantidad mínima es 1 unidad.");
+      return;
+    }
     const nuevoCarrito = carrito.map((item) =>
       item.id === id
         ? { ...item, cantidad: Math.max(item.cantidad - 1, 1) }
         : item
     );
     actualizarCarrito(nuevoCarrito);
+  }
+
+  function confirmarPedido() {
+    if (carrito.length !== 0) {
+      alert("Pedido Confirmado correctamente. El total es: $" + total);
+      actualizarCarrito([]);
+    } else {
+      alert(
+        "El carrito está vacío. Agrega productos antes de confirmar el pedido."
+      );
+    }
   }
 
   return (
@@ -80,7 +100,9 @@ function Carrito({ productos }) {
       ))}
       <div id={style.TotalCarritoContainer}>
         <h2 id={style.TotalCarrito}>Total: ${total}</h2>
-        <button id={style.BotonPagar}>Pagar</button>
+        <button id={style.BotonConfirmar} onClick={() => confirmarPedido()}>
+          Confirmar pedido
+        </button>
       </div>
     </div>
   );

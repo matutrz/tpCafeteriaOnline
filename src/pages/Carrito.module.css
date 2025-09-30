@@ -63,7 +63,7 @@
   margin-top: 20px;
 }
 
-#BotonPagar {
+#BotonConfirmar {
   background-color: #4CAF50; /* Verde */
   border: none;
   border-radius: 5px;
@@ -75,7 +75,7 @@
   
 }
 
-#BotonPagar:hover {
+#BotonConfirmar:hover {
   background-color: #45a049; /* Verde oscuro al pasar el mouse */
   scale: 1.05;
 }
@@ -133,7 +133,7 @@
     margin-top: 10px;
     text-align: left;
   }
-  #BotonPagar {
+  #BotonConfirmar {
     padding: 8px 10px;
     font-size: 14px;
     margin-top: 10px;
