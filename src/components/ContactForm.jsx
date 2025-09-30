@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Alert } from 'react-bootstrap';
+import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
   const [datosFormulario, setDatosFormulario] = useState({
