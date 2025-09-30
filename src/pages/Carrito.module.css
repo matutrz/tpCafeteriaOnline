@@ -1,3 +1,11 @@
+/*
+Paleta de colores:
+  #4A3026 (Marrón oscuro) Texto principal y elementos destacados
+  #D2946D (Marrón claro) Botones y detalles
+  #EDE4D8 (Beige) Fondo
+  #B0C4DE (Azul claro) iconos, lineas divisoras
+  #1A2E44 (Azul oscuro) pie de pagina y secciones claves
+*/
 #ContainerPrincipal {
   padding: 30px 80px 0px;
 }
@@ -13,15 +21,16 @@
   font-family: sans-serif;
   font-weight: 600;
   font-size: 36px;
-  color: #333333;
+  color: #4A3026;
 }
 
 #ContinuarComprando {
-  font-family: sans-serif;
+  font-family: Tahoma;
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
   align-self: flex-end;
+  color: #1A2E44;
 }
 
 #HeaderCarrito {
@@ -30,11 +39,12 @@
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 10px;
-  border-bottom: #8a8a8a 1px solid;
+  border-radius: 5px;
+  border-bottom: #B0C4DE  2px solid;
 }
 
 .Seccion {
-  color: #555555;
+  color: #4A3026;
 }
 
 /* Alineación específica para las columnas del header */
@@ -58,13 +68,13 @@
   font-family: sans-serif;
   font-weight: 600;
   font-size: 24px;
-  color: #333333;
+  color: #4A3026;
   text-align: right;
   margin-top: 20px;
 }
 
 #BotonConfirmar {
-  background-color: #4CAF50; /* Verde */
+  background-color: #D2946D; /* Verde */
   border: none;
   border-radius: 5px;
   color: white;
@@ -76,7 +86,7 @@
 }
 
 #BotonConfirmar:hover {
-  background-color: #45a049; /* Verde oscuro al pasar el mouse */
+  background-color: #af7b5b; /* Verde oscuro al pasar el mouse */
   scale: 1.05;
 }
 
