@@ -53,17 +53,16 @@ const ContactForm = () => {
   };
   
   return (
-    <Container className="my-5" style={{ maxWidth: '600px' }}>
-      <h2 className="text-center mb-4">Reservas y Contacto</h2>
+    <Container className={`my-5 ${styles.contenedorFormulario}`} style={{ maxWidth: '600px' }}>
+      
+      <h2 className={`text-center ${styles.titulo}`}>Reservas y Contacto</h2>
 
-      {/* Muestra el mensaje de confirmación */}
       {enviado && (
         <Alert variant="success" className="mb-4">
           ¡Tu mensaje/reserva ha sido enviado con éxito! Nos contactaremos pronto.
         </Alert>
       )}
 
-      {/* Muestra el mensaje de error de validación */}
       {error && (
         <Alert variant="danger" className="mb-4">
           {error}
@@ -72,9 +71,8 @@ const ContactForm = () => {
 
       <Form onSubmit={manejarEnvio}>
         
-        {/* Campo: Nombre */}
         <Form.Group className="mb-3" controlId="formNombre">
-          <Form.Label>Nombre (*)</Form.Label>
+          <Form.Label className={styles.label}>Nombre (*)</Form.Label>
           <Form.Control
             type="text"
             name="nombre"
@@ -85,9 +83,8 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        {/* Campo: Email */}
         <Form.Group className="mb-3" controlId="formEmail">
-          <Form.Label>Email (*)</Form.Label>
+          <Form.Label className={styles.label}>Email (*)</Form.Label>
           <Form.Control
             type="email"
             name="email"
@@ -98,9 +95,8 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        {/* Campo: Fecha de la Reserva */}
         <Form.Group className="mb-3" controlId="formFecha">
-          <Form.Label>Fecha de la Reserva (*)</Form.Label>
+          <Form.Label className={styles.label}>Fecha de la Reserva (*)</Form.Label>
           <Form.Control
             type="date"
             name="fecha"
@@ -110,9 +106,8 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        {/* Campo: Hora de la Reserva */}
         <Form.Group className="mb-3" controlId="formHora">
-          <Form.Label>Hora de la Reserva (*)</Form.Label>
+          <Form.Label className={styles.label}>Hora de la Reserva (*)</Form.Label>
           <Form.Control
             type="time"
             name="hora"
@@ -122,9 +117,8 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        {/* Campo: Mensaje / Detalles de la Reserva */}
         <Form.Group className="mb-3" controlId="formMensaje">
-          <Form.Label>Mensaje / Detalles</Form.Label>
+          <Form.Label className={styles.label}>Mensaje / Detalles</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
@@ -135,7 +129,11 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="w-100 mt-4">
+        <Button 
+          variant="primary" 
+          type="submit" 
+          className={`w-100 mt-4 ${styles.btnPrimario}`} 
+        >
           Enviar Solicitud
         </Button>
       </Form>

@@ -1,0 +1,58 @@
+/*
+Paleta de colores:
+  #4A3026 (Marrón oscuro) Texto principal y elementos destacados
+  #D2946D (Marrón claro) Botones y detalles
+  #EDE4D8 (Beige) Fondo
+  #B0C4DE (Azul claro) iconos, lineas divisoras
+  #1A2E44 (Azul oscuro) pie de pagina y secciones claves
+*/
+
+:root {
+    /* Paleta de la Cafetería */
+    --color-texto-principal: #4A3026; /* Marrón oscuro */
+    --color-fondo-claro: #EDE4D8;     /* Beige */
+    --color-botones: #D2946D;         /* Marrón claro (Acción) */
+    --color-divisores: #B0C4DE;       /* Azul claro */
+    --color-pie: #1A2E44;             /* Azul oscuro */
+}
+
+.contenedorFormulario {
+    background-color: var(--color-fondo-claro); 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--color-texto-principal); 
+}
+
+.titulo {
+    color: var(--color-texto-principal);
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.label {
+    color: var(--color-texto-principal);
+    font-weight: 500;
+}
+
+.btnPrimario {
+    background-color: var(--color-botones) !important;
+    border-color: var(--color-botones) !important;
+    color: white !important; 
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.btnPrimario:hover {
+    background-color: #c0855f !important; 
+    border-color: #c0855f !important;
+}
+
+.divisor {
+    border-bottom: 1px solid var(--color-divisores); /* Usando el Azul Claro */
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
