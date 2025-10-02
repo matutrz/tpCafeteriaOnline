@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import ElementoCarrito from "../components/ElementoCarrito";
 import style from "./Carrito.module.css";
 
-function Carrito({ productos }) {
-  const { carrito, setCarrito, actualizarCarrito } = productos;
+function Carrito({ funciones }) {
   const [total, setTotal] = useState(0);
-
+  const { carrito, setCarrito, actualizarCarrito } = funciones;
+  
   useEffect(() => {
     // Cargo el carrito desde localStorage al iniciar, sirve para cuando vuelvo a la pagina o la refresco
     const storageCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
