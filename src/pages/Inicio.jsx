@@ -2,7 +2,7 @@ import React from 'react'
 
 const Inicio = () => {
     return (
-        <div>inicio</div>
+        <div className='Fondo'>inicio</div>
     )
 }
 
