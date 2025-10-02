@@ -5,7 +5,7 @@ import style from "./Carrito.module.css";
 function Carrito({ funciones }) {
   const [total, setTotal] = useState(0);
   const { carrito, setCarrito, actualizarCarrito } = funciones;
-  
+
   useEffect(() => {
     // Cargo el carrito desde localStorage al iniciar, sirve para cuando vuelvo a la pagina o la refresco
     const storageCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -87,17 +87,22 @@ function Carrito({ funciones }) {
         <p className={style.Seccion}>CANTIDAD</p>
         <p className={style.Seccion}>TOTAL</p>
       </div>
-      {carrito.map((producto) => (
-        <ElementoCarrito
-          elemento={{
-            ...producto,
-            eliminarProducto: eliminarProducto,
-            aumentarCantidad: aumentarCantidad,
-            disminuirCantidad: disminuirCantidad,
-            setCantidad: setCantidad,
-          }}
-        ></ElementoCarrito>
-      ))}
+
+      {carrito.length === 0 ? (
+        <h2 id={style.CarritoVacio}>Tu carrito está vacío</h2>
+      ) : (
+        carrito.map((producto) => (
+          <ElementoCarrito
+            elemento={{
+              ...producto,
+              eliminarProducto: eliminarProducto,
+              aumentarCantidad: aumentarCantidad,
+              disminuirCantidad: disminuirCantidad,
+              setCantidad: setCantidad,
+            }}
+          ></ElementoCarrito>
+        ))
+      )}
       <div id={style.TotalCarritoContainer}>
         <h2 id={style.TotalCarrito}>Total: ${total}</h2>
         <button id={style.BotonConfirmar} onClick={() => confirmarPedido()}>
