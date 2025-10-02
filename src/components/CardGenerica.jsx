@@ -14,7 +14,6 @@ function CardGenerica({ titulo, descripcion, precio }) {
             </Card.Body>
             <ListGroup className="list-group-flush">
                 <ListGroup.Item>precio:{precio}</ListGroup.Item>
-                <ListGroup.Item>Opciones: Jarrito, Pocillo, Taza</ListGroup.Item>
             </ListGroup>
             <Card.Body>
                 <Card.Link href="#">Agregar al carrito</Card.Link>
