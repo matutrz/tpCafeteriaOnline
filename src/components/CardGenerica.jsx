@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-
+import Button from "react-bootstrap/Button";
 function CardGenerica({ props }) {
   const { imagen, nombre, descripcion, precio } = props.producto;
   return (
@@ -18,9 +18,12 @@ function CardGenerica({ props }) {
         <ListGroup.Item>precio:{precio}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link onClick={() => props.agregarProducto(props.producto)}>
+        <Button
+          variant="primary"
+          onClick={() => props.agregarProducto(props.producto)}
+        >
           Agregar al carrito
-        </Card.Link>
+        </Button>
       </Card.Body>
     </Card>
   );
