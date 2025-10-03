@@ -1,0 +1,15 @@
+.mainBg {
+    border-radius: 1em;
+}
+
+.bienvenida {
+    background-color: #B0c4DE;
+    padding: 2em;
+    margin-bottom: 2em;
+    color: #4a3026;
+}
+
+.intro {
+    margin-top: 2em;
+    background-color: #d2946D;
+}
