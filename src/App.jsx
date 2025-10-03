@@ -1,23 +1,15 @@
-import "./App.css";
+import './App.css'
+import Header from './components/Header'
+import Contacto from './pages/Contacto'
+import Carta from './pages/Carta'
+import Carrito from './pages/Carrito'
+import Inicio from './pages/Inicio'
+import { Routes, Route } from 'react-router-dom';
 import { useState } from "react";
-import Carrito from "./pages/Carrito";
-import reactLogo from './assets/react.svg';
 
 function App() {
-  //agregar en la parte de nacho
   const [carrito, setCarrito] = useState([]);
 
-  /*
-  los productos son objetos que tienen el siguiente formato:
-  { 
-    id: int,
-    nombre: string, 
-    imagen: url o archivo,
-    precio: int
-  }
-  */
-
-  //agregar en la parte de nacho
   function agregarProducto(producto) {
     //logica para agregar producto al carrito desde la carta
     //sirve para agregar un producto o agregar varias veces el mismo producto
@@ -36,7 +28,7 @@ function App() {
     actualizarCarrito(nuevoCarrito);
   }
 
-  //agregar en la parte de nacho
+
   function actualizarCarrito(nuevoCarrito) {
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
     setCarrito(nuevoCarrito);
@@ -44,53 +36,13 @@ function App() {
 
   return (
     <>
-      <button //boton para probar agregar productos
-        onClick={() =>
-          agregarProducto({
-            id: 1,
-            nombre: "Cafe",
-            imagen: reactLogo,
-            precio: 1500,
-          })
-        }
-      >
-        Agregar Cafe
-      </button>
-      <button //boton para probar agregar productos
-        onClick={() =>
-          agregarProducto({
-            id: 2,
-            nombre: "Cafe con leche",
-            imagen: reactLogo,
-            precio: 2000,
-          })
-        }
-      >
-        Agregar Cafe con Leche
-      </button>
-      <Carrito funciones={{ carrito, setCarrito, actualizarCarrito }}></Carrito>
-import './App.css'
-import Header from './components/Header'
-import Contacto from './pages/Contacto'
-import Carta from './pages/Carta'
-import Carrito from './pages/Carrito'
-import Inicio from './pages/Inicio'
-import { Routes, Route } from 'react-router-dom';
-
-
-function App() {
-
-  return (
-    <>
-
       <Header/>
         <Routes>
-          <Route path="/Inicio" element={<Inicio/>}/>
-          <Route path="/Carta" element={<Carta/>}/>
-          <Route path="/Carrito" element={<Carrito/>}/>
+          <Route path="/" element={<Inicio/>}/>
+          <Route path="/Carta" element={<Carta agregarProducto={agregarProducto}/>}/>
+          <Route path="/Carrito" element={<Carrito funciones={{ carrito, setCarrito, actualizarCarrito }}></Carrito>}/>
           <Route path="/Contacto" element={<Contacto/>}/>
         </Routes>
-
     </>
   );
 }

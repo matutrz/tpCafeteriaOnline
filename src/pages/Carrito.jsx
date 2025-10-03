@@ -93,6 +93,7 @@ function Carrito({ funciones }) {
       ) : (
         carrito.map((producto) => (
           <ElementoCarrito
+            key={producto.id}
             elemento={{
               ...producto,
               eliminarProducto: eliminarProducto,
