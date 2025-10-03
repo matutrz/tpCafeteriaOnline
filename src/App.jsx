@@ -1,5 +1,5 @@
 import './App.css'
-import Header from './components/Header'
+import Header from './components/HeaderPagina'
 import Contacto from './pages/Contacto'
 import Carta from './pages/Carta'
 import Carrito from './pages/Carrito'
