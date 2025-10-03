@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route, Link } from 'react-router-dom';
-import ContactForm from './components/ContactForm.jsx'; 
+import ContactPage from './pages/Contacto'; 
+import Carrito from "./pages/Carrito";
 
 function App() {
 
@@ -15,11 +16,11 @@ function App() {
         <Link to="/contacto">Contacto</Link>
       </nav>
       <Routes>
-        <Route
-          path="/contacto"
-          element={
-            <ContactForm />
-          }
+        <Route 
+            path="/contacto"
+            element={
+              <ContactPage />
+            } 
         />
       </Routes>
     </>

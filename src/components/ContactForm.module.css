@@ -1,58 +1,90 @@
-/*
-Paleta de colores:
-  #4A3026 (Marrón oscuro) Texto principal y elementos destacados
-  #D2946D (Marrón claro) Botones y detalles
-  #EDE4D8 (Beige) Fondo
-  #B0C4DE (Azul claro) iconos, lineas divisoras
-  #1A2E44 (Azul oscuro) pie de pagina y secciones claves
-*/
-
+/* Paleta de Colores de Luna & Granos Café */
 :root {
-    /* Paleta de la Cafetería */
-    --color-texto-principal: #4A3026; /* Marrón oscuro */
-    --color-fondo-claro: #EDE4D8;     /* Beige */
-    --color-botones: #D2946D;         /* Marrón claro (Acción) */
-    --color-divisores: #B0C4DE;       /* Azul claro */
-    --color-pie: #1A2E44;             /* Azul oscuro */
+    --color-marron-oscuro: #4A3026;
+    --color-marron-claro: #D2946D;
+    --color-beige: #EDE4D8;
+    --color-azul-claro: #B0C4DE;
+    --color-azul-oscuro: #1A2E44;
 }
 
 .contenedorFormulario {
-    background-color: var(--color-fondo-claro); 
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid var(--color-texto-principal); 
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
 
 .titulo {
-    color: var(--color-texto-principal);
-    font-size: 2em;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-align: center;
+    color: var(--color-marron-oscuro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: left !important;
 }
 
+/* Estilo para las etiquetas del formulario */
 .label {
-    color: var(--color-texto-principal);
     font-weight: 500;
+    color: var(--color-marron-oscuro);
+    margin-bottom: 0.2rem;
 }
 
+/* Estilo para los campos de entrada */
+/* Bootstrap ya maneja el diseño responsive de los inputs */
+.contenedorFormulario :global(.form-control) {
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    padding: 0.75rem 1rem;
+    color: var(--color-marron-oscuro);
+}
+
+.contenedorFormulario :global(.form-control:focus) {
+    border-color: var(--color-marron-claro);
+    box-shadow: 0 0 0 0.25rem rgba(210, 148, 109, 0.25); /* Sombra con el color marrón claro */
+}
+
+/* Estilo para el botón primario de envío */
 .btnPrimario {
-    background-color: var(--color-botones) !important;
-    border-color: var(--color-botones) !important;
-    color: white !important; 
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: background-color 0.3s;
+    background-color: var(--color-marron-claro);
+    border-color: var(--color-marron-claro);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s, border-color 0.2s;
 }
 
-.btnPrimario:hover {
-    background-color: #c0855f !important; 
-    border-color: #c0855f !important;
+.btnPrimario:hover, .btnPrimario:focus {
+    background-color: var(--color-marron-oscuro); /* Un hover más oscuro */
+    border-color: var(--color-marron-oscuro);
 }
 
-.divisor {
-    border-bottom: 1px solid var(--color-divisores); /* Usando el Azul Claro */
-    margin-bottom: 20px;
-    padding-top: 10px;
+/* Estilo para los mensajes de alerta */
+.contenedorFormulario :global(.alert-success) {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: var(--color-marron-oscuro);
+}
+
+.contenedorFormulario :global(.alert-danger) {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: var(--color-marron-oscuro);
+}
+
+/* Ajuste para que el título del formulario se alinee con "Get in Touch" de la imagen de referencia */
+@media (min-width: 992px) {
+    .contenedorFormulario {
+        /* Quita el padding lateral si es necesario para que se alinee mejor con el grid */
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow: none; /* Quita el box-shadow si se quiere fusionar con el fondo */
+        background-color: transparent; /* Fondo transparente */
+    }
+    .titulo {
+        font-size: 2rem;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+    }
 }

@@ -1,0 +1,87 @@
+/* Paleta de Colores de Luna & Granos Café */
+:root {
+    --color-marron-oscuro: #4A3026;   /* Texto principal y elementos destacados */
+    --color-marron-claro: #D2946D;  /* Botones y detalles de acción */
+    --color-beige: #EDE4D8;           /* Fondo general */
+    --color-azul-claro: #B0C4DE;      /* Iconos, líneas divisorias */
+    --color-azul-oscuro: #1A2E44;   /* Pie de página y secciones claves */
+}
+
+.contactPage {
+    background-color: var(--color-beige);
+    min-height: 100vh;
+}
+
+/* --- Banner de Cabecera (simulando la imagen del pan/café) --- */
+.headerBanner {
+    background-color: #F8F4F0; /* Un color neutro que simule el fondo de comida/pan */
+    border-bottom: 2px solid var(--color-azul-claro);
+    padding: 3rem 0;
+}
+
+.headerBanner h1 {
+    font-size: 2.5rem;
+    color: var(--color-marron-oscuro);
+    font-weight: 700;
+}
+
+.headerBanner p {
+    color: var(--color-marron-oscuro);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tituloPrincipal {
+    color: var(--color-marron-oscuro);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-marron-claro);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* --- Tarjetas de Contacto (Iconos) --- */
+.contactCard {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.contactCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+.contactIcon {
+    color: var(--color-marron-claro); /* Iconos en marrón claro */
+    margin-bottom: 0.5rem;
+}
+
+.contactValue {
+    display: block;
+    color: var(--color-marron-oscuro);
+    font-size: 1.1rem;
+}
+
+/* --- Mapa --- */
+.mapContainer {
+    border: 1px solid var(--color-azul-claro);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 10px;
+    background-color: white;
+}
+
+.mapPlaceholder {
+    width: 100%;
+    height: 300px; /* Altura fija para simular el mapa */
+    background-color: #f0f0f0;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    color: #888;
+}
