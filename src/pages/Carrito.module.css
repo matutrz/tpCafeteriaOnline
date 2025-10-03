@@ -1,0 +1,160 @@
+/*
+Paleta de colores:
+  #4A3026 (Marrón oscuro) Texto principal y elementos destacados
+  #D2946D (Marrón claro) Botones y detalles
+  #EDE4D8 (Beige) Fondo
+  #B0C4DE (Azul claro) iconos, lineas divisoras
+  #1A2E44 (Azul oscuro) pie de pagina y secciones claves
+*/
+#ContainerPrincipal {
+  padding: 30px 80px 0px;
+}
+
+#ContainerCarrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#TituloCarrito {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #4A3026;
+}
+
+#ContinuarComprando {
+  font-family: Tahoma;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+  color: #1A2E44;
+}
+
+#HeaderCarrito {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-bottom: #B0C4DE  2px solid;
+}
+
+.Seccion {
+  color: #4A3026;
+}
+
+/* Alineación específica para las columnas del header */
+#HeaderCarrito .Seccion:nth-child(1) {
+  text-align: left;
+}
+#HeaderCarrito .Seccion:nth-child(2) {
+  text-align: center;
+}
+#HeaderCarrito .Seccion:nth-child(3) {
+  text-align: right;
+}
+
+#CarritoVacio {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4A3026;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#TotalCarritoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#TotalCarrito {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #4A3026;
+  text-align: right;
+  margin-top: 20px;
+}
+
+#BotonConfirmar {
+  background-color: #D2946D; /* Verde */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  
+}
+
+#BotonConfirmar:hover {
+  background-color: #af7b5b; /* Verde oscuro al pasar el mouse */
+  scale: 1.05;
+}
+
+@media (max-width: 900px) {
+  #ContainerPrincipal {
+    padding: 20px 20px 0px;
+  }
+  #TituloCarrito {
+    font-size: 28px;
+  }
+  #HeaderCarrito {
+    font-size: 16px;
+    grid-template-columns: 1.5fr 1fr 1fr; /* Ajuste para coincidir con ElementoCarrito */
+  }
+  #HeaderCarrito .Seccion:nth-child(2) {
+    padding-right: 20px;
+  }
+  #TotalCarrito {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #ContainerPrincipal {
+    padding: 10px 4px 0px;
+  }
+  #ContainerCarrito {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  #TituloCarrito {
+    font-size: 22px;
+    text-align: center;
+  }
+  #ContinuarComprando {
+    font-size: 14px;
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  #HeaderCarrito {
+    grid-template-columns: 1fr 0.8fr 0.8fr;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  #HeaderCarrito .Seccion:nth-child(3) {
+    text-align: right;
+  }
+  #TotalCarritoContainer {
+    align-items: stretch;
+  }
+  #TotalCarrito {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: left;
+  }
+  #BotonConfirmar {
+    padding: 8px 10px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
