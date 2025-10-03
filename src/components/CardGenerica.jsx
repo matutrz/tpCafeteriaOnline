@@ -1,11 +1,11 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import cafe from '../assets/cafe.jpg';
 
-function CardGenerica({ titulo, descripcion, precio }) {
+
+function CardGenerica({ titulo, img, descripcion, precio }) {
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={cafe} />
+        <Card>
+            <Card.Img variant="top" src={img} style={{ height: '200px', objectFit: 'cover', width: '100%' }} />
             <Card.Body>
                 <Card.Title>{titulo}</Card.Title>
                 <Card.Text>

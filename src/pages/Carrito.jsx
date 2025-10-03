@@ -2,7 +2,7 @@ import React from 'react'
 
 const Carrito = () => {
     return (
-        <div className='Fondo'>carrito</div>
+        <div className='Fondo'>Tu carrito esta vacio</div>
     )
 }
 
