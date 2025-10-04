@@ -24,7 +24,6 @@ const ContactForm = () => {
   };
 
   const validarFormulario = () => {
-    // Validación simplificada: revisar que los campos con (*) estén llenos
     if (
       !datosFormulario.nombre ||
       !datosFormulario.email ||
@@ -46,10 +45,8 @@ const ContactForm = () => {
 
     console.log("Datos de reserva/contacto enviados:", datosFormulario);
 
-    // Simular envío a un API/Servicio
     setEnviado(true);
 
-    // Limpiar formulario
     setDatosFormulario({
       nombre: "",
       email: "",
@@ -60,7 +57,6 @@ const ContactForm = () => {
   };
 
   return (
-    // Se eliminó la Container para mejor control del layout en ContactPage
     <div className={styles.contenedorFormulario}>
       <h2 className={styles.titulo}>Reservas y Contacto</h2>
       <p className="mb-4 text-muted">
@@ -81,7 +77,6 @@ const ContactForm = () => {
       )}
 
       <Form onSubmit={manejarEnvio}>
-        {/* Nombre y Email en una sola fila (similar a la imagen) */}
         <div className="d-flex flex-column flex-md-row gap-3">
           <Form.Group className="mb-3 w-100" controlId="formNombre">
             <Form.Label className={styles.label}>Nombre (*)</Form.Label>
@@ -108,7 +103,6 @@ const ContactForm = () => {
           </Form.Group>
         </div>
 
-        {/* Fecha y Hora en una sola fila (para la reserva) */}
         <div className="d-flex flex-column flex-md-row gap-3">
           <Form.Group className="mb-3 w-100" controlId="formFecha">
             <Form.Label className={styles.label}>

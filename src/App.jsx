@@ -1,11 +1,11 @@
 import './App.css'
-import Header from './components/HeaderPagina'
 import Contacto from './pages/Contacto'
 import Carta from './pages/Carta'
 import Carrito from './pages/Carrito'
 import Inicio from './pages/Inicio'
 import { Routes, Route } from 'react-router-dom';
 import { useState } from "react";
+
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -36,7 +36,6 @@ function App() {
 
   return (
     <>
-      <Header/>
         <Routes>
           <Route path="/" element={<Inicio/>}/>
           <Route path="/Carta" element={<Carta agregarProducto={agregarProducto}/>}/>
