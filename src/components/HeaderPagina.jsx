@@ -61,41 +61,6 @@ function HeaderPagina() {
         </div>
       </div>
 
-
-      {filtro && (
-        <div
-          style={{
-            position: "absolute",
-            top: "72px",
-            right: "10px",
-            background: "white",
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-            padding: "10px",
-            zIndex: 2000,
-            width: "320px",
-            boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
-          }}
-        >
-          {resultados.length > 0 ? (
-            resultados.map((p) => (
-              <div key={p.id} className="d-flex align-items-center mb-2">
-                <img
-                  src={p.imagen}
-                  alt={p.nombre}
-                  style={{ width: 50, height: 50, objectFit: "cover", marginRight: 12, borderRadius: 6 }}
-                />
-                <div>
-                  <div style={{ fontWeight: 600 }}>{p.nombre}</div>
-                  <div style={{ fontSize: "0.9rem", color: "#555" }}>${p.precio}</div>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div>No se encontraron productos</div>
-          )}
-        </div>
-      )}
     </Navbar>
   );
 }
