@@ -1,5 +1,7 @@
 import './Inicio.css';
 import Carousel from 'react-bootstrap/Carousel';
+import { CAFE_INFO } from '../data/constants'; 
+import Layout from '../components/Layout';
 
 function Inicio() {
   return (
@@ -85,10 +87,6 @@ function Inicio() {
       </Carousel.Item>
     </Carousel>
 
-
-      <div className="footer">
-          <p>Cafetería Luna 2025®</p>
-      </div>
     </div>
     </Layout>
   );
