@@ -7,8 +7,15 @@ function Header() {
     
     return (
         <Navbar expand="lg" className="bg-body-tertiary m-0 p-0">
+            <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                <img src="/icon.png" alt="Bootstrap" width="48px" height="48px"img/>
+                </a>
+            </div>
+            </nav>
             <Container fluid className="p-0 ms-2">
-                <Navbar.Brand href="#home">Cafeteria</Navbar.Brand>
+                <Navbar.Brand href="#home">Cafetería Luna</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -26,6 +33,13 @@ function Header() {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
+            <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                <img src="/carrito.png" alt="Bootstrap" width="48px" height="48px"img/>
+                </a>
+            </div>
+            </nav>
         </Navbar>
     );
 }
