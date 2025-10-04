@@ -1,6 +1,3 @@
-import React from 'react';
-
-import Header from './HeaderPagina';
 import Footer from './FooterPagina';
 import { CAFE_INFO } from '../data/constants'; 
 

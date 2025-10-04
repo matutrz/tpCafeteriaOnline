@@ -15,7 +15,7 @@ function CardGenerica({ props }) {
         <Card.Text>{descripcion}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>precio:{precio}</ListGroup.Item>
+        <ListGroup.Item>${precio}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         <Button

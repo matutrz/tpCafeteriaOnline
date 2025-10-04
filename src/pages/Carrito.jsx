@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { CAFE_INFO } from '../data/constants'; 
-import Layout from '../components/Layout'; 
+import Layout from "../components/Layout";
 import ElementoCarrito from "../components/ElementoCarrito";
 import style from "./Carrito.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Carrito({ funciones }) {
   const [total, setTotal] = useState(0);
   const { carrito, setCarrito, actualizarCarrito } = funciones;
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Cargo el carrito desde localStorage al iniciar, sirve para cuando vuelvo a la pagina o la refresco
@@ -80,42 +81,46 @@ function Carrito({ funciones }) {
 
   return (
     <Layout activeLink="Carrito">
+      <div id={style.ContainerPrincipal}>
+        <div id={style.ContainerCarrito}>
+          <h1 id={style.TituloCarrito}>Tu Carrito</h1>
+          <h2
+            id={style.ContinuarComprando}
+            onClick={() => navigate("/Carta")}
+          >
+            Continuar Comprando
+          </h2>
+        </div>
+        <div id={style.HeaderCarrito}>
+          <p className={style.Seccion}>PRODUCTO</p>
+          <p className={style.Seccion}>CANTIDAD</p>
+          <p className={style.Seccion}>TOTAL</p>
+        </div>
 
-    <div id={style.ContainerPrincipal}>
-      <div id={style.ContainerCarrito}>
-        <h1 id={style.TituloCarrito}>Tu Carrito</h1>
-        <h2 id={style.ContinuarComprando}>Continuar Comprando</h2>
+        {carrito.length === 0 ? (
+          <h2 id={style.CarritoVacio}>Tu carrito está vacío</h2>
+        ) : (
+          carrito.map((producto) => (
+            <ElementoCarrito
+              key={producto.id}
+              elemento={{
+                ...producto,
+                eliminarProducto: eliminarProducto,
+                aumentarCantidad: aumentarCantidad,
+                disminuirCantidad: disminuirCantidad,
+                setCantidad: setCantidad,
+              }}
+            ></ElementoCarrito>
+          ))
+        )}
+        <div id={style.TotalCarritoContainer}>
+          <h2 id={style.TotalCarrito}>Total: ${total}</h2>
+          <button id={style.BotonConfirmar} onClick={() => confirmarPedido()}>
+            Confirmar pedido
+          </button>
+        </div>
       </div>
-      <div id={style.HeaderCarrito}>
-        <p className={style.Seccion}>PRODUCTO</p>
-        <p className={style.Seccion}>CANTIDAD</p>
-        <p className={style.Seccion}>TOTAL</p>
-      </div>
-
-      {carrito.length === 0 ? (
-        <h2 id={style.CarritoVacio}>Tu carrito está vacío</h2>
-      ) : (
-        carrito.map((producto) => (
-          <ElementoCarrito
-            key={producto.id}
-            elemento={{
-              ...producto,
-              eliminarProducto: eliminarProducto,
-              aumentarCantidad: aumentarCantidad,
-              disminuirCantidad: disminuirCantidad,
-              setCantidad: setCantidad,
-            }}
-          ></ElementoCarrito>
-        ))
-      )}
-      <div id={style.TotalCarritoContainer}>
-        <h2 id={style.TotalCarrito}>Total: ${total}</h2>
-        <button id={style.BotonConfirmar} onClick={() => confirmarPedido()}>
-          Confirmar pedido
-        </button>
-      </div>
-    </div>
-  </Layout>
+    </Layout>
   );
 }
 

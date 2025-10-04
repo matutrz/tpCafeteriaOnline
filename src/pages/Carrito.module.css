@@ -31,6 +31,12 @@ Paleta de colores:
   cursor: pointer;
   align-self: flex-end;
   color: #1A2E44;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#ContinuarComprando:hover {
+  transform: scale(1.12);
 }
 
 #HeaderCarrito {

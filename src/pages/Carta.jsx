@@ -3,7 +3,6 @@ import CardGenerica from "../components/CardGenerica";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import productos from "../data/fakeBackend";
-import { CAFE_INFO } from '../data/constants'; 
 import Layout from '../components/Layout'; 
 
 function Carta({ agregarProducto }) {
