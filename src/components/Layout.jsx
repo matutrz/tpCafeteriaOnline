@@ -8,10 +8,6 @@ const Layout = ({ children, activeLink }) => {
     
     return (
         <>
-            <Header 
-                cafeName={CAFE_INFO.name} 
-                activeLink={activeLink} 
-            />
             
             <main style={{ minHeight: '60vh' }}>
                 {children} 

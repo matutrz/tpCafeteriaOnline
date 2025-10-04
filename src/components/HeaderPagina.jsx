@@ -1,26 +1,12 @@
-import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Buscador from "./Buscador";
 
-import Buscador from "./buscador";        
-import productos from "../data/fakeBackend"; 
-
-function HeaderPagina() {
-  const [filtro, setFiltro] = useState("");
-
-  const handleFiltrar = (texto) => {
-    setFiltro(texto);
-  };
-
-  const resultados = productos.filter((p) =>
-    p.nombre.toLowerCase().includes(filtro.trim().toLowerCase())
-  );
-
+function HeaderPagina({ agregarProducto }) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary m-0 p-0" style={{ position: "relative" }}>
-
       <div className="navbar bg-body-tertiary">
         <div className="container">
           <a className="navbar-brand" href="/">
@@ -47,11 +33,10 @@ function HeaderPagina() {
             </NavDropdown>
           </Nav>
 
-
-          <Buscador onFiltrar={handleFiltrar} />
+          <Buscador agregarProducto={agregarProducto} />
+          
         </Navbar.Collapse>
       </Container>
-
 
       <div className="navbar bg-body-tertiary">
         <div className="container">
@@ -60,7 +45,6 @@ function HeaderPagina() {
           </a>
         </div>
       </div>
-
     </Navbar>
   );
 }
