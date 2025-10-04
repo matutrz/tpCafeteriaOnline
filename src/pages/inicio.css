@@ -11,5 +11,21 @@
 
 .intro {
     margin-top: 2em;
+    padding: 8em;
     background-color: #d2946D;
+}
+
+.footer {
+    background-color: #4a3026;
+    padding: 2%;
+    border-bottom: 0%;
+}
+
+p {
+    color: #Ede4D8;
+}
+
+.carousel {
+    padding: 8em;
+    background-color: #B0c4DE;
 }
