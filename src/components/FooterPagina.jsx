@@ -22,7 +22,7 @@ const Footer = ({ cafeName, direccion, telefono, email }) => {
                         <ul className={footerStyles.linkList}>
                             <li><Link to="/">Inicio</Link></li>
                             <li><Link to="/Carta">Carta</Link></li>
-                            <li><Link to="/Nosotros">Sobre Nosotros</Link></li>
+                            <li><Link to="/SobreNos">Sobre Nosotros</Link></li>
                             <li><Link to="/Contacto">Contacto</Link></li>
                         </ul>
                     </Col>

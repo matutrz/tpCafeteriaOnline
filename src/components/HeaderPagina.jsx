@@ -11,7 +11,7 @@ function HeaderPagina({ agregarProducto }) {
           <img src="/icon.png" alt="logo" width="48" height="48" />
         </a>
         <Navbar.Brand className="me-4" href="#home">
-          Cafetería Luna
+          Luna & Granos Café
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

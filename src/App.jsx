@@ -4,6 +4,7 @@ import Inicio from './pages/Inicio';
 import Carta from './pages/Carta';
 import Carrito from './pages/Carrito';
 import Contacto from './pages/Contacto';
+import SobreNos from "./pages/SobreNos";
 import HeaderPagina from './components/HeaderPagina';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path="/Carta" element={<Carta agregarProducto={agregarProducto} />} />
         <Route path="/Carrito" element={<Carrito funciones={{ carrito, setCarrito, actualizarCarrito }} />} />
         <Route path="/Contacto" element={<Contacto />} />
+        <Route path= "/SobreNos" element={<SobreNos />} />
       </Routes>
     </>
   );

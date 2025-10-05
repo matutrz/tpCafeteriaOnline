@@ -1,0 +1,22 @@
+.carousel {
+    padding: 1em;
+    background-color: #B0c4DE;
+    margin-bottom: 1em;
+}
+
+.slideTitle{
+  font-size: 100%;
+  background: rgba(237, 228, 216, .6);
+  color: #1a2e44;
+}
+
+.slideDesc {
+    font-size: 75%;
+    background: rgba(176, 196, 222, .6);
+    color: #1a2e44;
+}
+
+#titulo {
+    padding: 1em;
+    color: #1a2e44;
+}
