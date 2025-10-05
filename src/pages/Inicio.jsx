@@ -1,9 +1,29 @@
-import './Inicio.css';
-import { CAFE_INFO } from '../data/constants'; 
+import { Container, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import styles from './Inicio.module.css';
 
-function Inicio() {
-  return (
-    <div className="main-block">
+const Inicio = () => {
+    return (
+        <>
+            <section className={styles.heroSection} id="inicio">
+                <Container className={styles.heroContent}>
+                    <h1 className={styles.heroTitle}>Luna & Granos Café</h1>
+                    <p className={styles.heroSubtitle}>
+                        Donde la Tradición Encuentra la Noche.
+                    </p>
+                    <Button as={Link} to="/carta" className={styles.ctaButton}>
+                        Ver Nuestra Carta
+                    </Button>
+                </Container>
+            </section>
+        </>
+      );
+};
+
+export default Inicio;
+
+/*
+<div className="main-block">
       <h2 className="bienvenida">¡Bienvenidos a la Cafetería Luna!</h2>
       <img
         alt=""
@@ -22,11 +42,4 @@ function Inicio() {
           la calle Rosales al nro. 3092. Los horarios de atención son de 08:00 a
           14:00 y de 16:00 a 22:00. ¡Te esperamos!
         </p>
-      </div>
-
-    
-    </div>
-  );
-};
-
-export default Inicio;
+*/
