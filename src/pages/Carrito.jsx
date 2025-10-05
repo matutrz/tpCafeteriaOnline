@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Layout from "../components/Layout";
 import ElementoCarrito from "../components/ElementoCarrito";
 import style from "./Carrito.module.css";
 import { useNavigate } from "react-router-dom";
@@ -80,7 +79,6 @@ function Carrito({ funciones }) {
   }
 
   return (
-    <Layout activeLink="Carrito">
       <div id={style.ContainerPrincipal}>
         <div id={style.ContainerCarrito}>
           <h1 id={style.TituloCarrito}>Tu Carrito</h1>
@@ -120,7 +118,6 @@ function Carrito({ funciones }) {
           </button>
         </div>
       </div>
-    </Layout>
   );
 }
 

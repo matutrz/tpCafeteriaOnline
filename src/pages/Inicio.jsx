@@ -1,10 +1,8 @@
 import './Inicio.css';
 import { CAFE_INFO } from '../data/constants'; 
-import Layout from '../components/Layout';
 
 function Inicio() {
   return (
-    <Layout activeLink="Inicio">
     <div className="main-block">
       <h2 className="bienvenida">¡Bienvenidos a la Cafetería Luna!</h2>
       <img
@@ -28,7 +26,6 @@ function Inicio() {
 
     
     </div>
-    </Layout>
   );
 };
 

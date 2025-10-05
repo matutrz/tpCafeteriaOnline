@@ -4,14 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faStore } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { CAFE_INFO } from '../data/constants'; 
-import Layout from '../components/Layout'; 
 import ContactForm from "../components/ContactForm";
 import styles from "./Contacto.module.css";
 
 
 const Contacto = () => {
   return (
-    <Layout activeLink="Contacto">
 
       <div className={styles.contactPage}>
         <div className={styles.headerBanner}>
@@ -106,7 +104,6 @@ const Contacto = () => {
           </Row>
         </Container>
       </div>
-    </Layout>
   );
 };
 

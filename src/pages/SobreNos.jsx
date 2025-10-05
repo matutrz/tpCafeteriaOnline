@@ -1,12 +1,11 @@
 import "./sobreNos.css";
 import Carousel from 'react-bootstrap/Carousel';
-import Layout from '../components/Layout'; 
 import { Container } from "react-bootstrap";
 
 
 function sobreNos() {
     return(
-        <Layout activeLink="SobreNos">
+        <div>
             <h1 id="titulo">Sobre Nosotros</h1>
             <Container className="main">
                     <Carousel fade className='carousel'>
@@ -69,9 +68,8 @@ function sobreNos() {
                         </Carousel.Item>
                         </Carousel>
                 </Container>
-            </Layout>
+    </div>
     );
-    
 };
 
 export default sobreNos;

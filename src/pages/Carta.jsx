@@ -3,12 +3,10 @@ import CardGenerica from "../components/CardGenerica";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import productos from "../data/fakeBackend";
-import Layout from '../components/Layout'; 
 
 function Carta({ agregarProducto }) {
   return (
 
-    <Layout activeLink="Carta">
     <div className="Fondo">
       <h1>Carta</h1>
       <section>
@@ -21,7 +19,6 @@ function Carta({ agregarProducto }) {
         </Row>
       </section>
     </div>
-  </Layout>
   );
 }
 
