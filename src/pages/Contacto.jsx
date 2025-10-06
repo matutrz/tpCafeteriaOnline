@@ -24,7 +24,7 @@ const Contacto = () => {
 
         <Container className="my-5">
           <Row className="text-start">
-            <Col lg={5} className={`mb-4 mb-lg-0 ${styles.separatorColumn}`}> {/* 💡 Aplica clase de separador */}
+            <Col lg={5} className={`mb-4 mb-lg-0 ${styles.separatorColumn}`}>
               <h2 className={`mb-4 ${styles.tituloPrincipal}`}>
                 Ponte en Contacto
               </h2>
@@ -32,21 +32,24 @@ const Contacto = () => {
                 Usa cualquiera de estos métodos para comunicarte con nosotros.
               </p>
 
-              <div className="d-grid gap-3">
-                <Card className={styles.contactCard}>
-                  <Card.Body className="text-center py-4">
-                    <FontAwesomeIcon
-                      icon={faPhone}
-                      className={styles.contactIcon}
-                      size="2x"
-                    />
-                    <p className="mt-2 mb-0">Teléfono</p>
-                    <strong className={styles.contactValue}>
-                      {CAFE_INFO.phone} 
-                    </strong>
-                  </Card.Body>
-                </Card>
+          <Row xs={2} sm={2} className="g-3"> 
+                <Col> 
+                    <Card className={styles.contactCard}>
+                        <Card.Body className="text-center py-4">
+                            <FontAwesomeIcon
+                                icon={faPhone}
+                                className={styles.contactIcon}
+                                size="2x"
+                            />
+                            <p className="mt-2 mb-0">Teléfono</p>
+                            <strong className={styles.contactValue}>
+                                {CAFE_INFO.phone} 
+                            </strong>
+                        </Card.Body>
+                    </Card>
+                </Col>
 
+                <Col>
                 <Card className={styles.contactCard}>
                   <Card.Body className="text-center py-4">
                     <FontAwesomeIcon
@@ -60,7 +63,10 @@ const Contacto = () => {
                     </strong>
                   </Card.Body>
                 </Card>
+                </Col>
 
+
+                <Col>
                 <Card className={styles.contactCard}>
                   <Card.Body className="text-center py-4">
                     <FontAwesomeIcon
@@ -74,7 +80,9 @@ const Contacto = () => {
                     </strong>
                   </Card.Body>
                 </Card>
+                </Col>
 
+                <Col>
                 <Card className={styles.contactCard}>
                   <Card.Body className="text-center py-4">
                     <FontAwesomeIcon
@@ -88,14 +96,8 @@ const Contacto = () => {
                     </strong>
                   </Card.Body>
                 </Card>
-              </div>
-
-              <div className={`mt-4 ${styles.mapContainer}`}>
-                <p className="text-center text-muted mb-1">Encuéntranos</p>
-                <div className={styles.mapPlaceholder}>
-                  <p className="text-center pt-5">[Aquí iría el Mapa]</p>
-                </div>
-              </div>
+                </Col>
+              </Row>
             </Col>
 
             <Col lg={7} className={styles.contactFormColumn}>

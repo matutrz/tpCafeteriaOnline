@@ -1,0 +1,60 @@
+
+:root {
+    --color-marron-oscuro: #4A3026;
+    --color-marron-claro: #D2946D;
+    --color-azul-oscuro: #1A2E44;
+}
+
+.productCard {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; 
+}
+
+.productCard:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cardTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-marron-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.cardText {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 40px; 
+}
+
+.cardPrice {
+    /* Precio */
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-marron-claro);
+    border-bottom: 1px solid #eee;
+}
+
+.addToCartButton {
+    background-color: var(--color-azul-oscuro) !important; 
+    border-color: var(--color-azul-oscuro) !important;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.addToCartButton:hover {
+    background-color: var(--color-marron-claro) !important;
+    border-color: var(--color-marron-claro) !important;
+}

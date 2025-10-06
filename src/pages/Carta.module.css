@@ -1,0 +1,31 @@
+
+:root {
+    --color-marron-oscuro: #4A3026;
+    --color-marron-claro: #D2946D;
+    --color-azul-oscuro: #1A2E44;
+    --color-beige: #EDE4D8;
+}
+
+.cartaPage {
+    background-color: var(--color-beige);
+    min-height: 100vh;
+}
+
+.cartaHeader {
+    background-color: var(--color-azul-oscuro);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.cartaHeader h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-marron-claro);
+}
+
+.cartaHeader p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}

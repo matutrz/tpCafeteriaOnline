@@ -1,5 +1,6 @@
-#root {
-  text-align: center;
-  background-color: #ede4d8 ;
+body, html {
+    background-color: #EDE4D8;
+    margin: 0;
+    padding: 0;
 }
 

@@ -1,25 +1,28 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
+import styles from "./CardGenerica.module.css";
+
 function CardGenerica({ props }) {
   const { imagen, nombre, descripcion, precio } = props.producto;
   return (
-    <Card>
+    <Card className={styles.productCard}>
       <Card.Img
         variant="top"
         src={imagen}
-        style={{ height: "200px", objectFit: "cover", width: "100%" }}
+        className= {styles.cardImage}
       />
-      <Card.Body>
-        <Card.Title>{nombre}</Card.Title>
-        <Card.Text>{descripcion}</Card.Text>
+      <Card.Body className={styles.cardBody}>
+        <Card.Title className={styles.cardTitle}>{nombre}</Card.Title>
+        <Card.Text className={styles.cardText}>{descripcion}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>${precio}</ListGroup.Item>
+        <ListGroup.Item className={styles.cardPrice}>${precio}</ListGroup.Item>
       </ListGroup>
-      <Card.Body>
+      <Card.Body className="text-center">
         <Button
           variant="primary"
+          className={styles.addToCartButton}
           onClick={() => props.agregarProducto(props.producto)}
         >
           Agregar al carrito
