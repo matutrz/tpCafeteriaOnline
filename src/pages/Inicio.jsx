@@ -1,6 +1,8 @@
-import { Container, Button } from 'react-bootstrap';
+import { Container, Button, Row, Col, Card } from 'react-bootstrap'; 
 import { Link } from 'react-router-dom';
 import styles from './Inicio.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMugHot, faSeedling, faCookieBite, faStar } from '@fortawesome/free-solid-svg-icons'; 
 
 const Inicio = () => {
     return (
@@ -14,6 +16,50 @@ const Inicio = () => {
                     <Button as={Link} to="/carta" className={styles.ctaButton}>
                         Ver Nuestra Carta
                     </Button>
+                </Container>
+            </section>
+            <section className={`py-5 ${styles.promiseSection}`} id="promesa">
+                <Container className="text-center">
+                    <h2 className={styles.sectionTitle}>NUESTRA PROMESA</h2>
+                    <p className={styles.sectionSubtitle}>
+                        Hemos cultivado la experiencia perfecta, desde el grano hasta tu taza.
+                    </p>
+                    
+                    <Row className="mt-5">
+                        
+                        <Col md={3} className={styles.promiseBlock}>
+                            <FontAwesomeIcon icon={faMugHot} className={styles.promiseIcon} />
+                            <h3 className={styles.promiseTitle}>TUESTO ARTESANAL</h3>
+                            <p>
+                                Granos seleccionados y tostados diariamente, asegurando la máxima frescura y un sabor inigualable.
+                            </p>
+                        </Col>
+
+                        <Col md={3} className={styles.promiseBlock}>
+                            <FontAwesomeIcon icon={faSeedling} className={styles.promiseIcon} />
+                            <h3 className={styles.promiseTitle}>ORIGEN SOSTENIBLE</h3>
+                            <p>
+                                Colaboramos con fincas que respetan la tierra, garantizando prácticas éticas y granos de alta calidad.
+                            </p>
+                        </Col>
+
+                        <Col md={3} className={styles.promiseBlock}>
+                            <FontAwesomeIcon icon={faCookieBite} className={styles.promiseIcon} />
+                            <h3 className={styles.promiseTitle}>REPOSTERÍA FRESCA</h3>
+                            <p>
+                                Acompaña tu bebida con nuestros postres, perfectos para cualquier momento del día.
+                            </p>
+                        </Col>
+
+                        <Col md={3} className={styles.promiseBlock}>
+                            <FontAwesomeIcon icon={faStar} className={styles.promiseIcon} />
+                            <h3 className={styles.promiseTitle}>EXPERIENCIA PREMIUM</h3>
+                            <p>
+                                Un ambiente acogedor y servicio dedicado para que cada visita sea un escape perfecto.
+                            </p>
+                        </Col>
+
+                    </Row>
                 </Container>
             </section>
         </>
