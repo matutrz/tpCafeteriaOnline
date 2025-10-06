@@ -132,6 +132,79 @@
     }
 }
 
+/* --- SECCIÓN: UN VISTAZO A NOSOTROS --- */
+
+.aboutSection {
+    background-color: white;
+    padding: 6rem 0;
+}
+
+.aboutLogoImage {
+    width: 250px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.aboutLogoImage:hover {
+    transform: scale(1.05);
+}
+
+.aboutTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-azul-oscuro);
+    margin-bottom: 1.5rem;
+}
+
+.aboutText {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.aboutText strong {
+    color: var(--color-marron-oscuro); 
+}
+
+.aboutCtaButton {
+    background-color: transparent;
+    border: 2px solid var(--color-marron-claro);
+    color: var(--color-marron-claro);
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.aboutCtaButton:hover {
+    background-color: var(--color-marron-claro);
+    color: white;
+    border-color: var(--color-marron-claro);
+}
+
+@media (max-width: 768px) {
+    .aboutIconLarge {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+    .aboutTitle {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .aboutText {
+        text-align: center;
+    }
+    .aboutCtaButton {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .aboutLogoImage {
+        width: 180px; 
+        margin-bottom: 1rem;
+    }
+}
+
 .carousel {
     padding: 8em;
     background-color: #B0c4DE;

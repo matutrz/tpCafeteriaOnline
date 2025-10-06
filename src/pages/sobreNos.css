@@ -1,4 +1,133 @@
-.carousel {
+
+:root {
+    --color-marron-claro: #D2946D;
+    --color-azul-oscuro: #1A2E44;
+}
+
+/*SECCIÓN CARUSEL */
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-azul-oscuro);
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.carousel-custom {
+    max-width: 1000px; 
+    margin: 0 auto 5rem auto; 
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.carousel-img {
+    height: 500px; 
+    object-fit: cover; 
+    filter: brightness(85%);
+}
+
+.carousel-caption-custom {
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 1rem;
+    border-radius: 6px;
+    bottom: 25px; 
+    width: 100%; 
+    left: 0; 
+    right: 0; 
+    margin: 0;
+}
+
+.slide-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white; 
+    text-shadow: 1px 1px 3px var(--color-marron-claro); 
+    margin-bottom: 0.5rem;
+}
+
+.slide-desc {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 350px;
+    }
+    .slide-title {
+        font-size: 1.4rem;
+    }
+    .slide-desc {
+        font-size: 0.85rem;
+    }
+    .carousel-caption-custom {
+        bottom: 15px; 
+        padding: 0.8rem;
+    }
+}
+
+/*SECCIÓN MISIÓN Y VISIÓN */
+.mision-vision-section {
+    background-color: var(--color-beige); 
+    padding: 3rem 0;
+}
+
+.vision-icon {
+    font-size: 2.5rem;
+    color: var(--color-marron-claro);
+    margin-bottom: 1rem;
+}
+
+.mision-vision-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-azul-oscuro);
+    margin-bottom: 0.8rem;
+}
+
+.mision-vision-section p {
+    color: #555;
+    font-size: 1rem;
+}
+
+
+/*SECCIÓN VALORES CLAVE */
+.valores-section {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-azul-oscuro);
+    letter-spacing: 1px;
+}
+
+.valor-block {
+    padding: 1rem;
+}
+
+.valor-icon {
+    font-size: 3rem;
+    color: var(--color-marron-claro);
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.valor-block:hover .valor-icon {
+    transform: scale(1.1);
+}
+
+.valor-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-marron-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+/*.carousel {
     padding: 1em;
     background-color: #B0c4DE;
     margin-bottom: 1em;
@@ -19,4 +148,4 @@
 #titulo {
     padding: 1em;
     color: #1a2e44;
-}
+}*/

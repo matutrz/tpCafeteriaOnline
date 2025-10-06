@@ -62,6 +62,32 @@ const Inicio = () => {
                     </Row>
                 </Container>
             </section>
+
+            <section className={`py-5 ${styles.aboutSection}`} id="sobre-nosotros-preview">
+                <Container>
+                    <Row className="align-items-center">
+                        
+                        <Col md={6} className="text-center mb-4 mb-md-0">
+                            <img 
+                                src="/icon.png"
+                                alt="Logo de Luna y Granos Café"
+                                className={styles.aboutLogoImage} 
+                            />
+                        </Col>
+
+                        <Col md={6}>
+                            <h2 className={styles.aboutTitle}>Más que solo café... Es un encuentro.</h2>
+                            <p className={styles.aboutText}>
+                                "Luna & Granos Café" no solo vende la taza perfecta; vendemos la experiencia de una pausa, el confort de un ambiente cálido y la certeza de estar bebiendo un producto con historia y ética. Desde nuestro tostado artesanal de 2003 hasta la sonrisa de nuestro staff, queremos que te sientas como en casa.
+                            </p>
+                            <Button as={Link} to="/SobreNos" className={styles.aboutCtaButton}>
+                                Conoce Nuestra Historia Completa
+                            </Button>
+                        </Col>
+                        
+                    </Row>
+                </Container>
+            </section>
         </>
       );
 };
