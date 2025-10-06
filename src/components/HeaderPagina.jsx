@@ -20,6 +20,7 @@ function HeaderPagina({ agregarProducto }) {
             <Nav.Link href="/Carta">Carta</Nav.Link>
             <Nav.Link href="/Carrito">Tu pedido</Nav.Link>
             <Nav.Link href="/Contacto">Contacto</Nav.Link>
+            <Nav.Link href="/SobreNos">Sobre nosotros</Nav.Link>
           </Nav>
           
             <Buscador agregarProducto={agregarProducto} />
