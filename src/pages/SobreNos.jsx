@@ -46,7 +46,7 @@ const sobreNos = () => {
                         <Carousel.Caption className="carousel-caption-custom">
                             <h3 className="slide-title">¿Dónde encontrarnos?</h3>
                             <p className="slide-desc">
-                                En la localidad de Potrillo, calle Rosales al 3092. <br/>
+                                Estamos ubicados en Av. Granos de la Luna 543 <br/>
                                 Te esperamos de Lunes a Sábados: 08:00 a 14:00 y 16:00 a 22:00.
                             </p>
                         </Carousel.Caption>
