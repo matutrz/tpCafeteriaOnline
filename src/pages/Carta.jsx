@@ -17,7 +17,7 @@ function Carta({ agregarProducto }) {
         <section>
           <Row className="g-3 justify-content-center"> 
             {productos.map((producto) => (
-              <Col key={producto.id} xs={6} sm={6} md={3} lg={3} xl={3}>
+              <Col key={producto.id} xs={12} sm={6} md={3} lg={3} xl={3}>
                 <CardGenerica props={{ producto, agregarProducto }} />
               </Col>
             ))}
