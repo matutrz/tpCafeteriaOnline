@@ -38,7 +38,7 @@ tpCafeteriaOnline/
 ## Requisitos
 
 - ![Node.js](./src/assets/node_icon.png) Node.js (versión recomendada: 18.x o superior)
-- ![npm](src/assets/npm_old_icon_132179.png) npm (gestor de paquetes de Node.js)
+- ![npm](src/assets/npm_icon.png) npm (gestor de paquetes de Node.js)
 - ![Git](./src/assets/git_icon.png) Git (solo necesario si se clona el repositorio)
 
 ## Instrucciones para correr el proyecto localmente
