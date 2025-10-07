@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMugHot, faSeedling, faCookieBite, faStar } from '@fortawesome/free-solid-svg-icons'; 
 
 const Inicio = () => {
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
     return (
         <>
             <section className={styles.heroSection} id="inicio">
@@ -13,7 +14,7 @@ const Inicio = () => {
                     <p className={styles.heroSubtitle}>
                         Donde la Tradición Encuentra la Noche.
                     </p>
-                    <Button as={Link} to="/carta" className={styles.ctaButton}>
+                    <Button as={Link} to="/carta" className={styles.ctaButton} onClick={scrollToTop}>
                         Ver Nuestra Carta
                     </Button>
                 </Container>
@@ -80,7 +81,7 @@ const Inicio = () => {
                             <p className={styles.aboutText}>
                                 "Luna & Granos Café" no solo vende la taza perfecta; vendemos la experiencia de una pausa, el confort de un ambiente cálido y la certeza de estar bebiendo un producto con historia y ética. Desde nuestro tostado artesanal de 2003 hasta la sonrisa de nuestro staff, queremos que te sientas como en casa.
                             </p>
-                            <Button as={Link} to="/SobreNos" className={styles.aboutCtaButton}>
+                            <Button as={Link} to="/SobreNos" className={styles.aboutCtaButton} onClick={scrollToTop}>
                                 Conoce Nuestra Historia Completa
                             </Button>
                         </Col>
