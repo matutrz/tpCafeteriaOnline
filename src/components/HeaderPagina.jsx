@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
-import { MoonFill, SunFill } from 'react-bootstrap-icons';
+import { MoonFill, SunFill } from "react-bootstrap-icons";
 import Buscador from "./Buscador";
 
 function HeaderPagina({ agregarProducto, isDarkMode, toggleDarkMode }) {
@@ -24,17 +24,17 @@ function HeaderPagina({ agregarProducto, isDarkMode, toggleDarkMode }) {
             <Nav.Link href="/Contacto">Contacto</Nav.Link>
             <Nav.Link href="/SobreNos">Sobre nosotros</Nav.Link>
           </Nav>
-          
+          <div className="d-flex align-items-center">
             <Buscador agregarProducto={agregarProducto} />
 
             <Button
-              variant="link" 
+              variant="link"
               className={`ms-3 custom-dark-mode-btn`}
               onClick={toggleDarkMode}
             >
               {isDarkMode ? <SunFill /> : <MoonFill />}
             </Button>
-          
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

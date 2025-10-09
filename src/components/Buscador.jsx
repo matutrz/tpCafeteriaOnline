@@ -11,15 +11,7 @@ function Buscador({ agregarProducto }) {
   );
 
   return (
-    <div
-      className="mx-auto w-100 w-lg-auto"
-      style={{
-        position: "relative",
-        minWidth: "120px",
-        marginBottom: "10px",
-        maxWidth: "350px",
-      }}
-    >
+    <div className="mx-auto w-100 w-lg-auto">
       <Form onSubmit={(e) => e.preventDefault()}>
         <Form.Control
           type="search"
