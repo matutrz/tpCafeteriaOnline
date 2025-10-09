@@ -14,14 +14,14 @@ import cheesecake from '../assets/cheesecake.jpg';
 
 const productos = [
     { id: 1, imagen: cafe, nombre: "Infusión", descripcion: "Puede ser cafe, cafe con leche, lagrima, te o mate cocido", precio: 1500 },
-    { id: 2, imagen: medialunaInfusion, nombre: "Infusión con 2 medialunas", descripcion: "El verdadero desayuno", precio: 3000 },
-    { id: 3, imagen: medialuna, nombre: "Medialuna", descripcion: "Lista para disfrutar", precio: 1200 },
-    { id: 4, imagen: medialunajyq, nombre: "Medialuna con jamon y queso", descripcion: "Acompaña todo", precio: 2000 },
-    { id: 5, imagen: frolaInfusion, nombre: "Infusión con pastafrola", descripcion: "Desayuno dulce", precio: 2500 },
-    { id: 6, imagen: frola, nombre: "Pastafrola", descripcion: "El dulce justo", precio: 1500 },
-    { id: 7, imagen: tostadoInfusion, nombre: "Infusión con tostados", descripcion: "Desayuno argentino", precio: 5000 },
-    { id: 8, imagen: tostados, nombre: "Tostado de Sandwich de miga", descripcion: "Disfrute al paso", precio: 4000 },
-    { id: 9, imagen: chocotorta, nombre: "Chocotorta", descripcion: "Tentación para cualquiera", precio: 8000 },
+    { id: 2, imagen: medialuna, nombre: "Medialuna", descripcion: "Lista para disfrutar", precio: 1200 },
+    { id: 3, imagen: frolaInfusion, nombre: "Infusión con pastafrola", descripcion: "Desayuno dulce", precio: 2500 },
+    { id: 4, imagen: frola, nombre: "Pastafrola", descripcion: "El dulce justo", precio: 1500 },
+    { id: 5, imagen: medialunaInfusion, nombre: "Infusión con 2 medialunas", descripcion: "El verdadero desayuno", precio: 3000 },
+    { id: 6, imagen: medialunajyq, nombre: "Medialuna con jamon y queso", descripcion: "Acompaña todo", precio: 2000 },
+    { id: 7, imagen: tostados, nombre: "Tostado de Sandwich de miga", descripcion: "Disfrute al paso", precio: 4000 },
+    { id: 8, imagen: chocotorta, nombre: "Chocotorta", descripcion: "Tentación para cualquiera, postre clásico argentino irresistible y siempre delicioso.", precio: 8000 },
+    { id: 9, imagen: tostadoInfusion, nombre: "Infusión con tostados", descripcion: "Desayuno argentino", precio: 5000 },
     { id: 10, imagen: tortaMatilda, nombre: "Torta Matilda", descripcion: "Para los amantes del chocolate", precio: 8000 },
     { id: 11, imagen: cheesecake, nombre: "Cheese cake", descripcion: "Suave, cremoso, base de galleta crujiente", precio: 8000 },
     { id: 12, imagen: carrotcake, nombre: "Carrot cake", descripcion: "Ideal si buscas algo dulce y esponjoso", precio: 8000 }
