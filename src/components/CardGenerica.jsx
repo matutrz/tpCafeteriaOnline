@@ -24,7 +24,10 @@ function CardGenerica({ props }) {
         <motion.Button
           variant="primary"
           className={styles.addToCartButton}
-          onClick={() => props.agregarProducto(props.producto)}
+          onClick={() => {
+            props.agregarProducto(props.producto);
+            alert(nombre + " agregado al carrito ✅ podes gestionar tu compra en la sección 'tu pedido' ");
+          }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
