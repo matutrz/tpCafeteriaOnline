@@ -1,6 +1,5 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
 import styles from "./CardGenerica.module.css";
 import { motion } from "motion/react";
 
@@ -21,7 +20,7 @@ function CardGenerica({ props }) {
         <ListGroup.Item className={styles.cardPrice}>${precio}</ListGroup.Item>
       </ListGroup>
       <Card.Body className="text-center">
-        <motion.Button
+        <motion.button
           variant="primary"
           className={styles.addToCartButton}
           onClick={() => {
@@ -32,7 +31,7 @@ function CardGenerica({ props }) {
           whileTap={{ scale: 0.95 }}
         >
           Agregar al carrito
-        </motion.Button>
+        </motion.button>
       </Card.Body>
     </Card>
   );
