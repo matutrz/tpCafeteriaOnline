@@ -6,6 +6,10 @@ import frola from '../assets/frola.jpg';
 import frolaInfusion from '../assets/frolaInfusion.jpg';
 import tostados from '../assets/tostados.jpg';
 import tostadoInfusion from '../assets/tostadoInfusion.jpg';
+import carrotcake from '../assets/carrotcake.jpg';
+import chocotorta from '../assets/chocotorta.jpg';
+import tortaMatilda from '../assets/tortaMatilda.jpg';
+import cheesecake from '../assets/cheesecake.jpg';
 
 
 const productos = [
@@ -17,6 +21,10 @@ const productos = [
     { id: 6, imagen: frola, nombre: "Pastafrola", descripcion: "El dulce justo", precio: 1500 },
     { id: 7, imagen: tostadoInfusion, nombre: "Infusión con tostados", descripcion: "Desayuno argentino", precio: 5000 },
     { id: 8, imagen: tostados, nombre: "Tostado de Sandwich de miga", descripcion: "Disfrute al paso", precio: 4000 },
+    { id: 9, imagen: chocotorta, nombre: "Chocotorta", descripcion: "Tentación para cualquiera", precio: 8000 },
+    { id: 10, imagen: tortaMatilda, nombre: "Torta Matilda", descripcion: "Para los amantes del chocolate", precio: 8000 },
+    { id: 11, imagen: cheesecake, nombre: "Cheese cake", descripcion: "Suave, cremoso, base de galleta crujiente", precio: 8000 },
+    { id: 12, imagen: carrotcake, nombre: "Carrot cake", descripcion: "Ideal si buscas algo dulce y esponjoso", precio: 8000 }
 ];
 
 

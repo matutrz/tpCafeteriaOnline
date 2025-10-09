@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ElementoCarrito from "../components/ElementoCarrito";
 import style from "./Carrito.module.css";
+import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 
 function Carrito({ funciones }) {
@@ -113,9 +114,11 @@ function Carrito({ funciones }) {
         )}
         <div id={style.TotalCarritoContainer}>
           <h2 id={style.TotalCarrito}>Total: ${total}</h2>
-          <button id={style.BotonConfirmar} onClick={() => confirmarPedido()}>
+          <motion.button whileHover={{ scale: 1.1 }} 
+            whileTap={{ scale: 0.95 }} 
+            id={style.BotonConfirmar} onClick={() => confirmarPedido()}>
             Confirmar pedido
-          </button>
+          </motion.button>
         </div>
       </div>
   );

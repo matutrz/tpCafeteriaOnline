@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import productos from "../data/fakeBackend";
+import { motion } from "motion/react";
 
 function Buscador({ agregarProducto }) {
   const [query, setQuery] = useState("");
@@ -100,16 +101,19 @@ function Buscador({ agregarProducto }) {
                   </span>
                 </div>
               </div>
-              <Button
+              <motion.Button
                 size="sm"
                 onClick={() => {
                   agregarProducto(p);
                   setQuery("");
                 }}
-                style={{ flexShrink: 0, marginLeft: "10px" }}
+                style={{ flexShrink: 0, marginLeft: "10px",
+                  borderRadius: "8px", padding: "2px", backgroundColor: "#D2946D" }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Agregar
-              </Button>
+              </motion.Button>
             </div>
           ))}
           {resultados.length === 0 && (

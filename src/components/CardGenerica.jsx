@@ -2,6 +2,7 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import styles from "./CardGenerica.module.css";
+import { motion } from "motion/react";
 
 function CardGenerica({ props }) {
   const { imagen, nombre, descripcion, precio } = props.producto;
@@ -20,13 +21,18 @@ function CardGenerica({ props }) {
         <ListGroup.Item className={styles.cardPrice}>${precio}</ListGroup.Item>
       </ListGroup>
       <Card.Body className="text-center">
-        <Button
+        <motion.Button
           variant="primary"
           className={styles.addToCartButton}
-          onClick={() => props.agregarProducto(props.producto)}
+          onClick={() => {
+            props.agregarProducto(props.producto);
+            alert(nombre + " agregado al carrito ✅ podes gestionar tu compra en la sección 'tu pedido' ");
+          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           Agregar al carrito
-        </Button>
+        </motion.Button>
       </Card.Body>
     </Card>
   );
