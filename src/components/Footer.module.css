@@ -11,6 +11,10 @@
     font-size: 0.95rem;
 }
 
+.footerColumn {
+    text-align: center;
+}
+
 .brandName {
     font-weight: 700;
     color: var(--color-marron-claro); 
@@ -47,7 +51,7 @@
 
 .contactList li {
     margin-bottom: 0.75rem;
-    display: flex;
+    display: block;
     align-items: flex-start;
 }
 
@@ -58,6 +62,15 @@
 }
 
 @media (min-width: 992px) { 
+    .footerColumn {
+        text-align: left;
+    }
+
+    .contactList li {
+        display: flex;
+        align-items: flex-start;
+    }
+
     .separator {
         border-right: 1px solid var(--color-marron-claro);
         padding-right: 2rem; 

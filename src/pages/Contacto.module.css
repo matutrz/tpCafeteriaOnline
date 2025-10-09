@@ -12,11 +12,15 @@
     min-height: 100vh;
 }
 
-/* --- Banner de Cabecera (simulando la imagen del pan/café) --- */
 .headerBanner {
-    background-color: #F8F4F0; /* Un color neutro que simule el fondo de comida/pan */
-    border-bottom: 2px solid var(--color-azul-claro);
-    padding: 3rem 0;
+    background-image: url('/bannerContacto.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 8rem 0;
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
 }
 
 .headerBanner h1 {

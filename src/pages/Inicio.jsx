@@ -12,7 +12,7 @@ const Inicio = () => {
                 <Container className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>Luna & Granos Café</h1>
                     <p className={styles.heroSubtitle}>
-                        Donde la Tradición Encuentra la Noche.
+                        Donde la tradición encuentra la noche.
                     </p>
                     <Button as={Link} to="/carta" className={styles.ctaButton} onClick={scrollToTop}>
                         Ver Nuestra Carta

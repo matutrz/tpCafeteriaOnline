@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import footerStyles from './Footer.module.css';
 
-const Footer = ({ cafeName, direccion, telefono, email }) => {
+const Footer = ({ miembros, cafeName, direccion, telefono, email }) => {
     // Función para hacer scroll al top
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -12,14 +12,25 @@ const Footer = ({ cafeName, direccion, telefono, email }) => {
         <footer className={footerStyles.customFooter}>
             <Container className="py-5">
                 <Row>
-                    <Col lg={4} className={`mb-4 mb-lg-0 ${footerStyles.separator}`}> 
-                        <h4 className={footerStyles.brandName}>☕ {cafeName}</h4>
-                        <p>
-                            El lugar ideal para disfrutar de la luna y el grano en una taza. Calidad y tradición.
-                        </p>
+                    <Col lg={4} className={`mb-4 mb-lg-0 ${footerStyles.separator} ${footerStyles.footerColumn}`}> 
+                        <h5 className={footerStyles.columnTitle}>Desarrollado por:</h5> 
+                        <ul className={footerStyles.teamList || footerStyles.linkList}> 
+                            {miembros.map((miembro, index) => (
+                                <li key={index} className={footerStyles.teamMember}>
+                                    <a 
+                                        href={miembro.github}
+                                        target="_blank"        
+                                        rel="noopener noreferrer"
+                                        className={footerStyles.githubLink}
+                                    >
+                                        {miembro.name} 
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </Col>
 
-                    <Col lg={4} className={`mb-4 mb-lg-0 ${footerStyles.separator}`}> 
+                    <Col lg={4} className={`mb-4 mb-lg-0 ${footerStyles.separator} ${footerStyles.footerColumn}`}> 
                         <h5 className={footerStyles.columnTitle}>Enlaces Rápidos</h5>
                         <ul className={footerStyles.linkList}>
                             <li><Link to="/" onClick={scrollToTop}>Inicio</Link></li>
@@ -29,7 +40,7 @@ const Footer = ({ cafeName, direccion, telefono, email }) => {
                         </ul>
                     </Col>
 
-                    <Col lg={4}>
+                    <Col lg={4} className= {footerStyles.footerColumn}>
                         <h5 className={footerStyles.columnTitle}>Contáctanos</h5>
                         <ul className={footerStyles.contactList}>
                             <li>

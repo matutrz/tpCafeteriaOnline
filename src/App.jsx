@@ -8,7 +8,7 @@ import Contacto from './pages/Contacto';
 import SobreNos from "./pages/SobreNos";
 import HeaderPagina from './components/HeaderPagina';
 import Footer from './components/FooterPagina';
-import { CAFE_INFO } from './data/constants'; 
+import { CAFE_INFO, EQUIPO_MIEMBROS } from './data/constants'; 
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -47,6 +47,7 @@ function App() {
       </Routes>
 
       <Footer
+          miembros={EQUIPO_MIEMBROS}
           cafeName={CAFE_INFO.name}
           direccion={CAFE_INFO.address}
           telefono={CAFE_INFO.phone}
