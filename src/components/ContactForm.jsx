@@ -59,7 +59,7 @@ const ContactForm = () => {
   return (
     <div className={styles.contenedorFormulario}>
       <h2 className={styles.titulo}>Reservas y Contacto</h2>
-      <p className="mb-4 text-muted">
+      <p className={`mb-4 ${styles.descripcionContacto}`}>
         Dinos cómo podemos ayudarte. Tu mesa o tu consulta, un mensaje directo.
       </p>
 
@@ -136,7 +136,7 @@ const ContactForm = () => {
           <Form.Label className={styles.label}>Mensaje / Detalles</Form.Label>
           <Form.Control
             as="textarea"
-            rows={4} // Aumentado a 4 filas para ser más visible
+            rows={4} 
             name="mensaje"
             value={datosFormulario.mensaje}
             onChange={manejarCambio}

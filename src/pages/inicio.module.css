@@ -1,12 +1,4 @@
-:root {
-    --color-marron-oscuro: #4A3026; 
-    --color-marron-claro: #D2946D; 
-    --color-beige: #EDE4D8; 
-    --color-azul-oscuro: #1A2E44;
-}
-
 /* --- SECCIÓN: BANNER --- */
-
 .heroSection {
     background-image: url('/bannerImg.jpg');
     background-size: cover;
@@ -18,6 +10,10 @@
     align-items: center;
 }
 
+:global(body.dark-mode) .heroSection {
+    background-image: url('/bannerImgDark.jpg'); 
+}
+
 .heroContent {
     text-align: center;
 }
@@ -25,7 +21,7 @@
 .heroTitle {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--color-azul-oscuro); 
+    color: var(--color-texto-titulos); 
     margin-bottom: 1rem;
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.4),
@@ -34,7 +30,7 @@
 
 .heroSubtitle {
     font-size: 1.5rem;
-    color: var(--color-marron-oscuro); 
+    color: var(--color-texto-principal); 
     margin-bottom: 2rem;
 
     text-shadow: 
@@ -43,17 +39,17 @@
 }
 
 .ctaButton {
-    background-color: var(--color-marron-claro); 
-    border-color: var(--color-marron-claro);
-    color: white; 
+    background-color: var(--color-icono); 
+    border-color: var(--color-icono);
+    color: var(--color-fondo-secundario); 
     font-weight: 600;
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
     transition: all 0.3s ease;
 
     &:hover {
-        background-color: var(--color-marron-oscuro);
-        border-color: var(--color-marron-oscuro);
+        background-color: var(--color-texto-titulos);
+        border-color: var(--color-texto-titulos);
         transform: translateY(-2px);
     }
 }
@@ -79,21 +75,21 @@
 /* --- SECCIÓN: POR QUÉ ELEGIRNOS --- */
 
 .promiseSection {
-    background-color: var(--color-beige);
+    background-color: var(--color-fondo-pagina);
     padding: 6rem 0;
 }
 
 .sectionTitle {
     font-size: 2.2rem;
     font-weight: 600;
-    color: var(--color-azul-oscuro);
+    color: var(--color-texto-titulos);
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
 }
 
 .sectionSubtitle {
     font-size: 1.1rem;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     margin-bottom: 3rem;
     font-style: italic;
 }
@@ -109,14 +105,14 @@
 
 .promiseIcon {
     font-size: 3.5rem;
-    color: var(--color-marron-claro);
+    color: var(--color-icono);
     margin-bottom: 1.5rem;
 }
 
 .promiseTitle {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
@@ -124,7 +120,7 @@
 
 .promiseBlock p {
     font-size: 0.95rem;
-    color: #666; 
+    color: var(--color-texto-secundario); 
 }
 
 @media (max-width: 768px) {
@@ -136,7 +132,7 @@
 /* --- SECCIÓN: UN VISTAZO A NOSOTROS --- */
 
 .aboutSection {
-    background-color: white;
+    background-color: var(--color-fondo-secundario);
     padding: 6rem 0;
 }
 
@@ -153,34 +149,34 @@
 .aboutTitle {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-azul-oscuro);
+    color: var(--color-texto-titulos);
     margin-bottom: 1.5rem;
 }
 
 .aboutText {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--color-texto-secundario);
     margin-bottom: 2rem;
     line-height: 1.6;
 }
 
 .aboutText strong {
-    color: var(--color-marron-oscuro); 
+    color: var(--color-texto-principal); 
 }
 
 .aboutCtaButton {
     background-color: transparent;
-    border: 2px solid var(--color-marron-claro);
-    color: var(--color-marron-claro);
+    border: 2px solid var(--color-icono);
+    color: var(--color-icono);
     font-weight: 600;
     padding: 0.7rem 1.5rem;
     transition: all 0.3s ease;
 }
 
 .aboutCtaButton:hover {
-    background-color: var(--color-marron-claro);
+    background-color: var(--color-boton);
     color: white;
-    border-color: var(--color-marron-claro);
+    border-color: var(--color-boton);
 }
 
 @media (max-width: 768px) {
@@ -204,9 +200,4 @@
         width: 180px; 
         margin-bottom: 1rem;
     }
-}
-
-.carousel {
-    padding: 8em;
-    background-color: #B0c4DE;
 }

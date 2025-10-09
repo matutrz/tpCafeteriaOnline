@@ -28,7 +28,7 @@ const Contacto = () => {
               <h2 className={`mb-4 ${styles.tituloPrincipal}`}>
                 Ponte en Contacto
               </h2>
-              <p className="mb-4">
+              <p className={`mb-4 ${styles.descripcionContacto}`}>
                 Usa cualquiera de estos métodos para comunicarte con nosotros.
               </p>
 

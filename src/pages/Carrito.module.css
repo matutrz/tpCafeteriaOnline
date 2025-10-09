@@ -1,14 +1,6 @@
-/*
-Paleta de colores:
-  #4A3026 (Marrón oscuro) Texto principal y elementos destacados
-  #D2946D (Marrón claro) Botones y detalles
-  #EDE4D8 (Beige) Fondo
-  #B0C4DE (Azul claro) iconos, lineas divisoras
-  #1A2E44 (Azul oscuro) pie de pagina y secciones claves
-*/
 #ContainerPrincipal {
   padding: 30px 80px 80px;
-  background-color: #EDE4D8;
+  background-color: var(--color-fondo-pagina);
 }
 
 #ContainerCarrito {
@@ -22,7 +14,7 @@ Paleta de colores:
   font-family: sans-serif;
   font-weight: 600;
   font-size: 36px;
-  color: #4A3026;
+  color: var(--color-texto-principal);
 }
 
 #ContinuarComprando {
@@ -31,7 +23,7 @@ Paleta de colores:
   font-size: 16px;
   cursor: pointer;
   align-self: flex-end;
-  color: #1A2E44;
+  color: var(--color-texto-titulos);
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -51,7 +43,7 @@ Paleta de colores:
 }
 
 .Seccion {
-  color: #4A3026;
+  color: var(--color-texto-principal);
 }
 
 /* Alineación específica para las columnas del header */
@@ -69,7 +61,7 @@ Paleta de colores:
   font-family: sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: #4A3026;
+  color: var(--color-texto-principal);
   margin-top: 50px;
   text-align: center;
 }
@@ -84,16 +76,16 @@ Paleta de colores:
   font-family: sans-serif;
   font-weight: 600;
   font-size: 24px;
-  color: #4A3026;
+  color: var(--color-texto-principal);
   text-align: right;
   margin-top: 20px;
 }
 
 #BotonConfirmar {
-  background-color: #D2946D; /* Verde */
+  background-color: var(--color-icono);
   border: none;
   border-radius: 5px;
-  color: white;
+  color: var(--color-fondo-secundario);
   padding: 10px 20px;
   font-size: 16px;
   margin-top: 20px;
@@ -102,7 +94,7 @@ Paleta de colores:
 }
 
 #BotonConfirmar:hover {
-  background-color: #af7b5b; /* Verde oscuro al pasar el mouse */
+  background-color: var(--color-texto-principal);
   scale: 1.05;
 }
 

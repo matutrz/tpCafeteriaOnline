@@ -1,11 +1,5 @@
-
-:root {
-    --color-marron-oscuro: #4A3026;
-    --color-marron-claro: #D2946D;
-    --color-azul-oscuro: #1A2E44;
-}
-
 .productCard {
+    background-color: var(--color-fondo-secundario);
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -28,13 +22,13 @@
 .cardTitle {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-titulos);
     margin-bottom: 0.5rem;
 }
 
 .cardText {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--color-texto-secundario);
     min-height: 40px; 
 }
 
@@ -42,19 +36,20 @@
     /* Precio */
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--color-marron-claro);
-    border-bottom: 1px solid #eee;
+    color: var(--color-icono);
+    background-color: var(--color-fondo-secundario);
+    border-bottom: 1px solid;
 }
 
 .addToCartButton {
-    background-color: var(--color-azul-oscuro) !important; 
-    border-color: var(--color-azul-oscuro) !important;
+    background-color: var(--color-fondo-terciario) !important; 
+    border-color: var(--color-fondo-terciario) !important;
     font-weight: 600;
     width: 100%;
     transition: background-color 0.3s;
 }
 
 .addToCartButton:hover {
-    background-color: var(--color-marron-claro) !important;
-    border-color: var(--color-marron-claro) !important;
+    background-color: var(--color-boton) !important;
+    border-color: var(--color-boton) !important;
 }

@@ -1,9 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
+import { MoonFill, SunFill } from 'react-bootstrap-icons';
 import Buscador from "./Buscador";
 
-function HeaderPagina({ agregarProducto }) {
+function HeaderPagina({ agregarProducto, isDarkMode, toggleDarkMode }) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary m-0 p-0" style={{ position: "relative" }}>
       <Container fluid className="px-3 d-flex align-items-center">
@@ -24,6 +26,14 @@ function HeaderPagina({ agregarProducto }) {
           </Nav>
           
             <Buscador agregarProducto={agregarProducto} />
+
+            <Button
+              variant="link" 
+              className={`ms-3 custom-dark-mode-btn`}
+              onClick={toggleDarkMode}
+            >
+              {isDarkMode ? <SunFill /> : <MoonFill />}
+            </Button>
           
         </Navbar.Collapse>
       </Container>

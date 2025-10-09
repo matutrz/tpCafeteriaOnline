@@ -1,52 +1,43 @@
-/* Paleta de Colores de Luna & Granos Café */
-:root {
-    --color-marron-oscuro: #4A3026;
-    --color-marron-claro: #D2946D;
-    --color-beige: #EDE4D8;
-    --color-azul-claro: #B0C4DE;
-    --color-azul-oscuro: #1A2E44;
-}
-
 .contenedorFormulario {
     padding: 2rem;
-    background-color: white;
+    background-color: var(color-fondo-secundario);
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
 
 .titulo {
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     font-weight: 700;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     text-align: left !important;
 }
 
-/* Estilo para las etiquetas del formulario */
+.descripcionContacto {
+    color: var(--color-texto-secundario);
+}
+
 .label {
     font-weight: 500;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     margin-bottom: 0.2rem;
 }
 
-/* Estilo para los campos de entrada */
-/* Bootstrap ya maneja el diseño responsive de los inputs */
 .contenedorFormulario :global(.form-control) {
     border: 1px solid #ccc;
     border-radius: 0.3rem;
     padding: 0.75rem 1rem;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
 }
 
 .contenedorFormulario :global(.form-control:focus) {
-    border-color: var(--color-marron-claro);
-    box-shadow: 0 0 0 0.25rem rgba(210, 148, 109, 0.25); /* Sombra con el color marrón claro */
+    border-color: var(--color-boton);
+    box-shadow: 0 0 0 0.25rem rgba(210, 148, 109, 0.25); 
 }
 
-/* Estilo para el botón primario de envío */
 .btnPrimario {
-    background-color: var(--color-marron-claro);
-    border-color: var(--color-marron-claro);
+    background-color: var(--color-boton);
+    border-color: var(--color-boton);
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.3rem;
@@ -54,31 +45,28 @@
 }
 
 .btnPrimario:hover, .btnPrimario:focus {
-    background-color: var(--color-marron-oscuro); /* Un hover más oscuro */
-    border-color: var(--color-marron-oscuro);
+    background-color: var(--color-texto-titulos);
+    border-color: var(--color-texto-titulos);
 }
 
-/* Estilo para los mensajes de alerta */
 .contenedorFormulario :global(.alert-success) {
     background-color: #d4edda;
     border-color: #c3e6cb;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-titulos);
 }
 
 .contenedorFormulario :global(.alert-danger) {
     background-color: #f8d7da;
     border-color: #f5c6cb;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
 }
 
-/* Ajuste para que el título del formulario se alinee con "Get in Touch" de la imagen de referencia */
 @media (min-width: 992px) {
     .contenedorFormulario {
-        /* Quita el padding lateral si es necesario para que se alinee mejor con el grid */
         padding-left: 0;
         padding-right: 0;
-        box-shadow: none; /* Quita el box-shadow si se quiere fusionar con el fondo */
-        background-color: transparent; /* Fondo transparente */
+        box-shadow: none; 
+        background-color: transparent;
     }
     .titulo {
         font-size: 2rem;

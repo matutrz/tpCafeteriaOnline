@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Inicio from './pages/Inicio';
@@ -34,9 +34,33 @@ function App() {
     setCarrito(nuevoCarrito);
   }
 
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode === 'true';
+  });
+
+  // Función para alternar el modo oscuro
+  const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
+  };
+  
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+    
+    localStorage.setItem('darkMode', isDarkMode);
+  }, [isDarkMode]);
+
   return (
-    <>
-      <HeaderPagina agregarProducto={agregarProducto} /> 
+    <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}> 
+      <HeaderPagina 
+        agregarProducto={agregarProducto} 
+        isDarkMode={isDarkMode}          
+        toggleDarkMode={toggleDarkMode}   
+      /> 
 
       <Routes>
         <Route path="/" element={<Inicio />} />
@@ -53,7 +77,7 @@ function App() {
           telefono={CAFE_INFO.phone}
           email={CAFE_INFO.email}
       />
-    </>
+    </div>
   );
 }
 

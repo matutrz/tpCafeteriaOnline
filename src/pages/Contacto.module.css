@@ -1,14 +1,5 @@
-/* Paleta de Colores de Luna & Granos Café */
-:root {
-    --color-marron-oscuro: #4A3026;   /* Texto principal y elementos destacados */
-    --color-marron-claro: #D2946D;  /* Botones y detalles de acción */
-    --color-beige: #EDE4D8;           /* Fondo general */
-    --color-azul-claro: #B0C4DE;      /* Iconos, líneas divisorias */
-    --color-azul-oscuro: #1A2E44;   /* Pie de página y secciones claves */
-}
-
 .contactPage {
-    background-color: var(--color-beige);
+    background-color: var(--color-fondo-pagina);
     min-height: 100vh;
 }
 
@@ -23,29 +14,38 @@
     align-items: center;
 }
 
+:global(body.dark-mode) .headerBanner {
+    background-image: url('/bannerContactoDark.jpg'); 
+}
+
 .headerBanner h1 {
     font-size: 2.5rem;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     font-weight: 700;
 }
 
 .headerBanner p {
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     max-width: 600px;
     margin: 0 auto;
 }
 
 .tituloPrincipal {
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     font-weight: 600;
-    border-bottom: 2px solid var(--color-marron-claro);
+    border-bottom: 2px solid var(--color-icono);
     padding-bottom: 0.5rem;
     display: inline-block;
 }
 
+.descripcionContacto {
+    color: var(--color-texto-secundario);
+}
+
 /* --- Tarjetas de Contacto (Iconos) --- */
 .contactCard {
-    background-color: white;
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-texto-secundario);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
@@ -59,12 +59,12 @@
 }
 
 .contactIcon {
-    color: var(--color-marron-claro); /* Iconos en marrón claro */
+    color: var(--color-icono);
     margin-bottom: 0.5rem;
 }
 
 .contactValue {
     display: block;
-    color: var(--color-marron-oscuro);
+    color: var(--color-texto-principal);
     font-size: 1.1rem;
 }
