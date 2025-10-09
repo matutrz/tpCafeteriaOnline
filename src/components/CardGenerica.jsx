@@ -12,7 +12,7 @@ function CardGenerica({ props }) {
         src={imagen}
         className= {styles.cardImage}
       />
-      <Card.Body className={styles.cardBody}>
+      <Card.Body>
         <Card.Title className={styles.cardTitle}>{nombre}</Card.Title>
         <Card.Text className={styles.cardText}>{descripcion}</Card.Text>
       </Card.Body>

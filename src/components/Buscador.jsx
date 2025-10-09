@@ -11,7 +11,7 @@ function Buscador({ agregarProducto }) {
   );
 
   return (
-    <div className="mx-auto w-100 w-lg-auto">
+    <div className="mx-auto w-100 w-lg-auto" style={{ position: "relative", minWidth: "300px" }}>
       <Form onSubmit={(e) => e.preventDefault()}>
         <Form.Control
           type="search"
@@ -93,11 +93,12 @@ function Buscador({ agregarProducto }) {
                   </span>
                 </div>
               </div>
-              <motion.Button
+              <motion.button
                 size="sm"
                 onClick={() => {
                   agregarProducto(p);
                   setQuery("");
+                  alert(p.nombre + " agregado al carrito ✅ podes gestionar tu compra en la sección 'tu pedido' ");
                 }}
                 style={{ flexShrink: 0, marginLeft: "10px",
                   borderRadius: "8px", padding: "2px", backgroundColor: "#D2946D" }}
@@ -105,7 +106,7 @@ function Buscador({ agregarProducto }) {
                 whileTap={{ scale: 0.95 }}
               >
                 Agregar
-              </motion.Button>
+              </motion.button>
             </div>
           ))}
           {resultados.length === 0 && (
